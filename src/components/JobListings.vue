@@ -7,6 +7,10 @@ const jobs = ref(JobData)
 defineProps({
    limit: {
       type: Number
+   },
+   showButton: {
+      type: Boolean,
+      default: false,
    }
 })
 </script>
@@ -21,5 +25,11 @@ defineProps({
             <JobListing v-for="job in jobs.slice(0, limit || jobs.length)" :key="job.id" :job="job" />
          </div>
       </div>
+   </section>
+
+   <section v-if="showButton" class="m-auto max-w-lg py-10 px-6 text-center">
+      <a class="text-center block bg-black rounded-lg py-4 px-6 text-white hover:bg-gray-700" href="jobs.html">
+         View All Jobs
+      </a>
    </section>
 </template>
