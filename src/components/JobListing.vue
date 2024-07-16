@@ -16,9 +16,7 @@ defineProps({
          </div>
 
          <div class="mb-5">
-            We are seeking a talented Frontend-Developer to join our team in
-            Phnom Penh, Ma. The ideal condidate will have strong skills in
-            HTML, CSS, JAVASCRIPT...
+            {{ job.description }}
          </div>
          <h3 class="text-green-500">
             {{ job.salary }}
