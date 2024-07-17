@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { defineProps, computed, ref } from 'vue'
 const props = defineProps({
    job: {
@@ -45,15 +46,10 @@ const toggleFullDescription = () => showFullDescription.value = !showFullDescrip
                <i class="pi pi-map-marker"></i>
                {{ job.location }}
             </div>
-            <a :href="'/job/' + job.id" class="
-         h-[36px] 
-         bg-green-500
-         hover:bg-green-600
-         text-white px-4 py-2
-         rounded-lg text-center text-sm
-         ">
+            <RouterLink :to="'/job/' + job.id"
+               class="h-[36px] bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm">
                Read more
-            </a>
+            </RouterLink>
          </div>
       </div>
    </div>
